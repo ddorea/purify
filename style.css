@@ -26,8 +26,8 @@ header {
 
 header .logo {
     position: absolute;
-    left: 20px;  /* Ajuste a distância da borda esquerda */
-    top: 55%;    /* Centraliza a imagem verticalmente */
+    left: 20px;  
+    top: 55%;  
     transform: translateY(-50%);
     width: 20%; 
     object-fit: contain;
@@ -38,7 +38,7 @@ header .header-text {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;  /* Centraliza verticalmente o texto */
+    justify-content: center; 
     align-items: center;
 }
 
@@ -280,7 +280,6 @@ main p {
     background-color: #f4f9ff;
     border-radius: 8px;
     margin-top: 3rem;
-    /* Adiciona mais espaço acima do Ciclo de Práticas */
 }
 
 .ciclo-praticas h2 {
@@ -349,7 +348,6 @@ main p {
     background: linear-gradient(145deg, #e3f2fd, #bbdefb);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     display: none;
-    /* Mantém escondido até ser ativado */
 }
 
 .quiz-section h3 {
@@ -375,8 +373,8 @@ main p {
 
 .quiz-section label {
     display: flex;
-    justify-content: flex-start;  /* Alinha os itens à esquerda */
-    align-items: center;  /* Alinha o conteúdo verticalmente */
+    justify-content: flex-start;  
+    align-items: center; 
     background-color: #ffffff;
     border: 1px solid #e0e0e0;
     padding: 10px;
@@ -525,10 +523,10 @@ main p {
 }
 
 .perguntas-container {
-    display: grid; /* Altere de flex para grid */
-    grid-template-columns: repeat(2, 1fr); /* Define 2 colunas de largura igual */
-    gap: 1.5rem; /* Espaçamento entre as perguntas */
-    max-width: 1000px; /* Ajuste a largura máxima para a área de perguntas */
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1.5rem; 
+    max-width: 1000px; 
     margin: 0 auto;
 }
 

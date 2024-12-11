@@ -53,13 +53,12 @@ function checkQuizAnswers(quizId) {
                 item.parentElement.style.backgroundColor = '';
             });
 
-            // Aplica a cor ao item clicado
             if (answer.checked) {
                 const isCorrect = answer.getAttribute('data-correct') === 'true';
                 if (isCorrect) {
-                    answer.parentElement.style.backgroundColor = 'green'; // Resposta correta
+                    answer.parentElement.style.backgroundColor = 'green';
                 } else {
-                    answer.parentElement.style.backgroundColor = 'red'; // Resposta incorreta
+                    answer.parentElement.style.backgroundColor = 'red'; 
                 }
             }
         });
