@@ -38,6 +38,25 @@ function scrollAnimations() {
     );
 
     elements.forEach(element => observer.observe(element));
+    
+    // Iniciar animação dos contadores ao carregar a página
+    const counters = document.querySelectorAll('.counter-animated');
+    counters.forEach(counter => {
+        if (isElementInViewport(counter)) {
+            animateCounters();  // Chama a animação diretamente
+        }
+    });
+}
+
+// Função para verificar se o elemento está visível na tela
+function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
 }
 
 // Função para verificar as respostas do quiz
