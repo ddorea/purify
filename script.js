@@ -35,31 +35,10 @@ function scrollAnimations() {
                 }
             });
         },
-        { threshold: 0.5 }
+        { threshold: 0.5 } // Dispara a animação quando o elemento estiver 50% visível
     );
 
     elements.forEach(element => observer.observe(element));
-
-    // Iniciar animação dos contadores ao carregar a página
-    const counters = document.querySelectorAll('.counter-animated');
-    counters.forEach(counter => {
-        if (isElementInViewport(counter)) {
-            counter.classList.add('fade-in');
-            animateCounters();  // Chama a animação diretamente
-            counter.classList.remove('counter-animated');
-        }
-    });
-}
-
-// Função para verificar se o elemento está visível na tela
-function isElementInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
 }
 
 // Função para verificar as respostas do quiz
