@@ -2,44 +2,52 @@
 function animateCounters() {
     const counters = document.querySelectorAll('.counter');
     counters.forEach(counter => {
-        const updateCounter = () => {
-            const target = +counter.getAttribute('data-target');
-            const current = +counter.innerText;
-            const increment = target / 100;
+        // Só anima o contador se ele não foi animado antes
+        if (!counter.classList.contains('animated')) {
+            const updateCounter = () => {
+                const target = +counter.getAttribute('data-target');
+                const current = +counter.innerText;
+                const increment = target / 100;
 
-            if (current < target) {
-                counter.innerText = Math.ceil(current + increment);
-                setTimeout(updateCounter, 30);
-            } else {
-                counter.innerText = target;
-            }
-        };
+                if (current < target) {
+                    counter.innerText = Math.ceil(current + increment);
+                    setTimeout(updateCounter, 30);
+                } else {
+                    counter.innerText = target;
+                }
+            };
 
-        counter.style.opacity = "1";
-        updateCounter();
+            counter.style.opacity = "1";
+            counter.classList.add('animated'); // Marca o contador como animado
+            updateCounter();
+        }
     });
 }
 
 // Função para observar animações na rolagem
 function scrollAnimations() {
-    const elements = document.querySelectorAll('.fade-in, .counter-animated');
+    const elements = document.querySelectorAll('.counter-animated');
     const observer = new IntersectionObserver(
         entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                    if (entry.target.classList.contains('counter-animated')) {
-                        animateCounters(); // Chama a animação do contador
-                        entry.target.classList.remove('counter-animated'); // Garante que a animação ocorra apenas uma vez
-                    }
+                    // Quando o contador entra na tela, anima
+                    animateCounters();
+                    observer.unobserve(entry.target); // Para de observar o elemento após animar
                 }
             });
         },
-        { threshold: 0.5 } // Dispara a animação quando o elemento estiver 50% visível
+        { threshold: 0.5 } // Dispara quando 50% do elemento está visível
     );
 
     elements.forEach(element => observer.observe(element));
 }
+
+// Chama a função de inicialização ao carregar a página
+document.addEventListener('DOMContentLoaded', () => {
+    scrollAnimations(); // Chama a função de animação na rolagem
+});
+
 
 // Função para verificar as respostas do quiz
 function checkQuizAnswers(quizId) {

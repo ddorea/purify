@@ -115,12 +115,18 @@ main p {
     font-size: 3rem;
     font-weight: bold;
     color: #2050b4;
+    opacity: 0; /* Começa invisível para animação */
+    transition: opacity 1s ease-in-out;
 }
 
 .counter-animated {
     opacity: 0;
-    animation: fadeIn 1s ease-in-out forwards, grow 1.5s ease-out forwards;
 }
+
+.counter.animated {
+    opacity: 1; /* Torna o contador visível após a animação */
+}
+
 
 @keyframes fadeIn {
     0% {
