@@ -29,7 +29,8 @@ function scrollAnimations() {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('fade-in');
                     if (entry.target.classList.contains('counter-animated')) {
-                        animateCounters();
+                        animateCounters(); // Chama a animação do contador
+                        entry.target.classList.remove('counter-animated'); // Garante que a animação ocorra apenas uma vez
                     }
                 }
             });
@@ -38,12 +39,14 @@ function scrollAnimations() {
     );
 
     elements.forEach(element => observer.observe(element));
-    
+
     // Iniciar animação dos contadores ao carregar a página
     const counters = document.querySelectorAll('.counter-animated');
     counters.forEach(counter => {
         if (isElementInViewport(counter)) {
+            counter.classList.add('fade-in');
             animateCounters();  // Chama a animação diretamente
+            counter.classList.remove('counter-animated');
         }
     });
 }
