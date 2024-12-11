@@ -1,0 +1,835 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #2050b4, #7ed957);
+    color: #fff;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 200px;
+    position: relative;
+}
+
+header .logo {
+    position: absolute;
+    left: 20px;  /* Ajuste a distância da borda esquerda */
+    top: 55%;    /* Centraliza a imagem verticalmente */
+    transform: translateY(-50%);
+    width: 20%; 
+    object-fit: contain;
+}
+
+header .header-text {
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Centraliza verticalmente o texto */
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #7ed957;
+    padding: 0.5rem 0;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #2050b4;
+    border-radius: 5px;
+}
+
+.content-container {
+    width: 90%;
+    /* Ou a largura que você achar melhor */
+    max-width: 2000px;
+    /* Define um limite máximo para a largura */
+    margin: 0 auto;
+    /* Centraliza horizontalmente */
+    padding: 20px;
+    /* Ajuste do padding para manter um espaçamento interno adequado */
+}
+
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+main h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #2050b4;
+}
+
+main p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.footer {
+    background-color: #2050b4;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes grow {
+    from {
+        transform: scale(0.8);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.counter {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #2050b4;
+}
+
+.counter-animated {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards, grow 1.5s ease-out forwards;
+}
+
+.impacto-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.impacto-card {
+    background: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.impacto-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.impacto-card p {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+.sobre {
+    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.bloco-container {
+    display: flex;
+    gap: 60px;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 2000px;
+}
+
+.bloco {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    width: 100%;
+    text-align: center;
+}
+
+.bloco h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.bloco p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.valores {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.valores h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.valores p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.ods-imagem img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.eventos-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.evento-card {
+    background: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.evento-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.evento-card h3 {
+    font-size: 1.2rem;
+    color: #2050b4;
+    margin-bottom: 1rem;
+}
+
+.evento-card p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0.3rem 0;
+}
+
+.ciclo-praticas {
+    padding: 20px;
+    background-color: #f4f9ff;
+    border-radius: 8px;
+    margin-top: 3rem;
+    /* Adiciona mais espaço acima do Ciclo de Práticas */
+}
+
+.ciclo-praticas h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.pratica-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pratica-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.pratica-card h3 {
+    font-size: 1.5rem;
+    color: #2050b4;
+    margin-bottom: 10px;
+}
+
+.pratica-card p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.pratica-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.pratica-actions .btn {
+    background-color: #2050b4;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.pratica-actions .btn:hover {
+    background-color: #7ed957;
+    transform: scale(1.05);
+}
+
+.quiz-section {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    background: linear-gradient(145deg, #e3f2fd, #bbdefb);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    /* Mantém escondido até ser ativado */
+}
+
+.quiz-section h3 {
+    font-size: 1.6rem;
+    color: #0d47a1;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.quiz-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.quiz-section form p {
+    font-weight: bold;
+    color: #1a237e;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.quiz-section label {
+    display: flex;
+    justify-content: flex-start;  /* Alinha os itens à esquerda */
+    align-items: center;  /* Alinha o conteúdo verticalmente */
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #424242;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.quiz-section label input[type="radio"] {
+    margin-right: 10px;
+}
+
+.quiz-section label:hover {
+    background-color: #e3f2fd;
+    transform: scale(1.02);
+}
+
+.quiz-section button {
+    background: linear-gradient(90deg, #42a5f5, #7e57c2);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.quiz-section button:hover {
+    background: linear-gradient(90deg, #7e57c2, #42a5f5);
+    transform: translateY(-2px);
+}
+
+.quiz-btn {
+    background: linear-gradient(90deg, #00c853, #64dd17);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 12px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.quiz-btn:hover {
+    background: linear-gradient(90deg, #64dd17, #00c853);
+    transform: scale(1.08);
+}
+
+.quiz-section.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.ciclo-palestras {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.palestra-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.palestra-card {
+    background: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.palestra-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.palestra-card h3 {
+    font-size: 1.5rem;
+    color: #2050b4;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.palestra-card p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0.5rem 0;
+    line-height: 1.6;
+}
+
+.galeria {
+    padding: 20px;
+}
+
+.galeria h2 {
+    font-size: 2rem;
+    color: #2050b4;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.galeria-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.galeria-item {
+    flex: 1;
+}
+
+.galeria-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.perguntas-educacional {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.perguntas-educacional h2 {
+    color: #2050b4;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.perguntas-container {
+    display: grid; /* Altere de flex para grid */
+    grid-template-columns: repeat(2, 1fr); /* Define 2 colunas de largura igual */
+    gap: 1.5rem; /* Espaçamento entre as perguntas */
+    max-width: 1000px; /* Ajuste a largura máxima para a área de perguntas */
+    margin: 0 auto;
+}
+
+.pergunta {
+    background: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.pergunta h3 {
+    font-size: 1.2rem;
+    color: #2050b4;
+    margin-bottom: 0.5rem;
+}
+
+.pergunta p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.parcerias {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.parcerias-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.parceria-card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.parceria-card:hover {
+    transform: scale(1.05);
+}
+
+.parceria-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.parceria-card h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.parceria-card p {
+    font-size: 16px;
+    color: #555;
+}
+
+.contato {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.contato h2 {
+    text-align: center;
+    color: #2050b4;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contato label {
+    font-size: 1rem;
+    color: #555;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.contato input,
+.contato textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contato input:focus,
+.contato textarea:focus {
+    border-color: #2050b4;
+    box-shadow: 0 0 5px rgba(32, 80, 180, 0.5);
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+button {
+    background-color: #2050b4;
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #103a75;
+    transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .navbar a {
+        font-size: 0.9rem; 
+    }
+
+    main h2 {
+        font-size: 1.5rem; 
+    }
+
+    section {
+        margin: 20px 10px; 
+    }
+
+    .container {
+        padding: 10px; 
+    }
+
+    .impacto-container,
+    .parcerias-container,
+    .eventos-container,
+    .palestra-container,
+    .praticas-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px; 
+    }
+
+    .perguntas-container {
+        gap: 1rem; 
+    }
+
+    .pergunta h3 {
+        font-size: 1.1rem; 
+    }
+
+    .pratica-actions {
+        flex-direction: column; 
+        gap: 10px; 
+    }
+
+    .quiz-section form {
+        gap: 10px; 
+    }
+
+    .quiz-section h3 {
+        font-size: 1.2rem; 
+    }
+
+    button {
+        font-size: 0.9rem; 
+        padding: 8px 12px; 
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px; 
+    }
+
+    header {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    header h1 {
+        font-size: 1.4rem; 
+        margin-bottom: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 1.5rem;
+        text-align: right;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        background-color: #f9f9f9; 
+        padding: 10px;
+    }
+
+    .navbar.active {
+        display: flex; 
+    }
+
+    .navbar a {
+        font-size: 0.85rem;
+        padding: 5px 10px; 
+        width: 100%; 
+        text-align: left;
+    }
+
+    main h2 {
+        font-size: 1.2rem;
+        text-align: center; 
+    }
+
+    section {
+        margin: 15px 0; 
+        padding: 10px; 
+    }
+
+    .container {
+        padding: 10px;
+        width: 100%; 
+        text-align: center; 
+    }
+
+    .impacto-container,
+    .parcerias-container,
+    .eventos-container,
+    .palestra-container,
+    .praticas-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center; /
+    }
+
+    .pratica-actions,
+    .quiz-section form {
+        flex-direction: column; 
+        gap: 10px;
+        align-items: center;
+    }
+
+    .quiz-section h3 {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 0.85rem;
+        padding: 8px 10px; 
+        width: 100%; 
+        max-width: 200px; 
+    }
+
+    img, video {
+        max-width: 100%; 
+        height: auto;
+    }
+
+    footer {
+        text-align: center;
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+}

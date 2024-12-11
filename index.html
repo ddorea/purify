@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purify na Comunidade</title>
+    <link rel="shortcut icon" href="img/purify_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <img src="img/purify_comunidade.png" alt="Logo Purify" class="logo">
+        <div class="header-text">
+            <h1>Purify na Comunidade</h1>
+            <p>Água Limpa Para Todos</p>
+        </div>
+    </header>
+    <nav class="navbar">
+        <a href="#sobre">Sobre o Projeto</a>
+        <a href="#ciclos">Ciclos</a>
+        <a href="#impacto">Impacto em Números</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#contato">Contato</a>
+    </nav>
+    <div class="content-container">
+        <main class="home">
+            <h2 class="fade-in">Bem-vindo ao Purify na Comunidade</h2>
+            <p class="fade-in">Transformando vidas através da educação e acesso à água potável.</p>
+            <div>
+                <h3 class="fade-in">Impacto alcançado:</h3>
+                <div class="counter counter-animated" data-target="1000">0</div>
+                <p>Comunidades beneficiadas</p>
+            </div>
+        </main>
+        <main class="sobre" id="sobre">
+            <div class="bloco-container">
+                <div class="bloco">
+                    <h2 class="fade-in">Missão</h2>
+                    <p class="fade-in">Levar educação e práticas sustentáveis sobre a qualidade da água para comunidades
+                        em
+                        situação de vulnerabilidade.</p>
+                </div>
+                <div class="bloco">
+                    <h2 class="fade-in">Visão</h2>
+                    <p class="fade-in">Ser reconhecido como um projeto transformador que impacta positivamente as
+                        comunidades.</p>
+                </div>
+            </div>
+
+            <div class="bloco valores">
+                <h2 class="fade-in">Valores</h2>
+                <p class="fade-in">Apoiamos todos os Objetivos de Desenvolvimento Sustentável (ODS), que orientam nossas
+                    ações para um futuro mais justo e sustentável.</p>
+                <div class="ods-imagem">
+                    <img src="img/ods.jpeg" alt="Objetivos de Desenvolvimento Sustentável" />
+                </div>
+            </div>
+        </main>
+        <main class="ciclos" id="ciclos">
+            <section class="ciclos" id="ciclo-educacional">
+                <h2 class="fade-in">Ciclo de Educação</h2>
+                <p class="fade-in">Vídeos e conteúdos educacionais sobre qualidade da água.</p>
+                <p class="fade-in"><strong>(Professores do Cimatec e UESC)</strong></p>
+                <div class="eventos-container">
+                    <div class="evento-card">
+                        <h3>O Impacto da Água Poluída na Saúde Pública</h3>
+                        <p>22 de novembro</p>
+                        <p>19h30min</p>
+                    </div>
+                    <div class="evento-card">
+                        <h3>Como o Filtro Purify Funciona?</h3>
+                        <p>25 de novembro</p>
+                        <p>18h30min</p>
+                    </div>
+                    <div class="evento-card">
+                        <h3>O Papel de Cada Um na Preservação da Água Limpa</h3>
+                        <p>26 de novembro</p>
+                        <p>19h30min</p>
+                    </div>
+                    <div class="evento-card">
+                        <h3>Mitos e Verdades Sobre a Água Potável</h3>
+                        <p>27 de novembro</p>
+                        <p>19h30min</p>
+                    </div>
+                </div>
+            </section>
+            <section class="ciclo-praticas" id="ciclo-praticas">
+                <h2 class="fade-in">Ciclo de Práticas</h2>
+
+                <div class="pratica-card">
+                    <h3>OVA 1: Água Limpa: Essencial para a Vida</h3>
+                    <p>A água é vital para todos os seres vivos. Descubra como a poluição impacta a saúde e como
+                        soluções
+                        simples podem garantir acesso a água limpa.</p>
+                    <div class="pratica-actions">
+                        <a href="https://youtu.be/WdvE_TrHRN0?si=L0jAAZ8q6xBrvaNT" target="_blank" class="btn">Assistir
+                            Vídeo Aula</a>
+                        <button class="btn quiz-btn" data-quiz-id="quiz1">Fazer o Quiz 1</button>
+                    </div>
+                    <!-- Seção do Quiz 1 -->
+                    <div class="quiz-section" id="quiz1" style="display: none;">
+                        <h3>Quiz 1: Água Limpa: Essencial para a Vida</h3>
+                        <form>
+                            <p>1. Qual é a principal função da água no corpo humano?</p>
+                            <label><input type="radio" name="q1" data-correct="false"> a) Fornecer energia.</label><br>
+                            <label><input type="radio" name="q1" data-correct="true"> b) Regular a temperatura e
+                                transportar
+                                nutrientes.</label><br>
+                            <label><input type="radio" name="q1" data-correct="false"> c) Criar novos
+                                tecidos.</label><br>
+
+                            <p>2. Como a poluição das águas pode afetar a saúde humana?</p>
+                            <label><input type="radio" name="q2" data-correct="false"> a) Pode aumentar a quantidade de
+                                oxigênio na água.</label><br>
+                            <label><input type="radio" name="q2" data-correct="true"> b) Pode causar doenças como
+                                diarreia e
+                                cólera.</label><br>
+                            <label><input type="radio" name="q2" data-correct="false"> c) Melhora a qualidade da
+                                água.</label><br>
+
+                            <p>3. Verdadeiro ou Falso: O uso responsável da água pode ajudar a prevenir a escassez e a
+                                poluição.</p>
+                            <label><input type="radio" name="q3" data-correct="true"> (V) Verdadeiro</label><br>
+                            <label><input type="radio" name="q3" data-correct="false"> (F) Falso</label><br>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="pratica-card">
+                    <h3>OVA 2: Mudanças Climáticas e seu Impacto no Planeta</h3>
+                    <p>Compreenda como as mudanças climáticas afetam a biodiversidade, os ecossistemas e a vida humana,
+                        e
+                        explore soluções possíveis.</p>
+                    <div class="pratica-actions">
+                        <a href="https://youtu.be/PH5halrNnfI?feature=shared" target="_blank" class="btn">Assistir Vídeo
+                            Aula</a>
+                        <button class="btn quiz-btn" data-quiz-id="quiz2">Fazer o Quiz 2</button>
+                    </div>
+                    <!-- Seção do Quiz 2 -->
+                    <div class="quiz-section" id="quiz2" style="display: none;">
+                        <h3>Quiz 2: Mudanças Climáticas e seu Impacto no Planeta</h3>
+                        <form>
+                            <p>1. Quais atividades humanas contribuem para as mudanças climáticas?</p>
+                            <label><input type="radio" name="q1" data-correct="true"> a) Uso de combustíveis fósseis e
+                                desmatamento.</label><br>
+                            <label><input type="radio" name="q1" data-correct="false"> b) Reflorestamento e preservação
+                                ambiental.</label><br>
+                            <label><input type="radio" name="q1" data-correct="false"> c) Uso de energias
+                                renováveis.</label><br>
+
+                            <p>2. Quais são os principais impactos das mudanças climáticas?</p>
+                            <label><input type="radio" name="q2" data-correct="false"> a) Aumento da biodiversidade e
+                                estabilidade climática.</label><br>
+                            <label><input type="radio" name="q2" data-correct="true"> b) Aumento das temperaturas e
+                                fenômenos climáticos extremos.</label><br>
+                            <label><input type="radio" name="q2" data-correct="false"> c) Diminuição das chuvas e queda
+                                nas
+                                temperaturas.</label><br>
+
+                            <p>3. Verdadeiro ou Falso: O uso de fontes de energia renováveis pode ajudar a combater as
+                                mudanças climáticas.</p>
+                            <label><input type="radio" name="q3" data-correct="true"> (V) Verdadeiro</label><br>
+                            <label><input type="radio" name="q3" data-correct="false"> (F) Falso</label><br>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="pratica-card">
+                    <h3>OVA 3: Sustentabilidade da Água e Ações Coletivas</h3>
+                    <p>Aprenda sobre o reuso da água e as ações coletivas necessárias para garantir a preservação dos
+                        recursos hídricos.</p>
+                    <div class="pratica-actions">
+                        <a href="https://youtu.be/XrCdZy9Mvb0?si=qQgRkJscPileAdrX" target="_blank" class="btn">Assistir
+                            Vídeo Aula</a>
+                        <button class="btn quiz-btn" data-quiz-id="quiz3">Fazer o Quiz 3</button>
+                    </div>
+                    <!-- Seção do Quiz 3 -->
+                    <div class="quiz-section" id="quiz3" style="display: none;">
+                        <h3>Quiz 3: Sustentabilidade da Água e Ações Coletivas</h3>
+                        <form>
+                            <p>1. O que é sustentabilidade da água?</p>
+                            <label><input type="radio" name="q1" data-correct="false"> a) Uso ilimitado e sem controle
+                                da
+                                água.</label><br>
+                            <label><input type="radio" name="q1" data-correct="true"> b) Uso responsável da água para
+                                não
+                                comprometer as futuras gerações.</label><br>
+                            <label><input type="radio" name="q1" data-correct="false"> c) Poluição controlada das águas
+                                para
+                                criação de novos habitats.</label><br>
+
+                            <p>2. Como o reuso de água pode ajudar na sustentabilidade?</p>
+                            <label><input type="radio" name="q2" data-correct="true"> a) Permite que a água seja
+                                utilizada
+                                para diferentes finalidades sem poluir.</label><br>
+                            <label><input type="radio" name="q2" data-correct="false"> b) Aumenta o consumo de água
+                                potável.</label><br>
+                            <label><input type="radio" name="q2" data-correct="false"> c) A água não pode ser
+                                reutilizada.</label><br>
+
+                            <p>3. Verdadeiro ou Falso: A preservação da água depende de ações individuais e coletivas.
+                            </p>
+                            <label><input type="radio" name="q3" data-correct="true"> (V) Verdadeiro</label><br>
+                            <label><input type="radio" name="q3" data-correct="false"> (F) Falso</label><br>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <section class="ciclo-palestras" id="ciclo-palestras">
+                <h2 class="fade-in">Ciclo de Palestras</h2>
+                <div class="palestra-container">
+                    <div class="palestra-card">
+                        <h3 class="fade-in">Água Limpa: Uma Necessidade Vital para Todos</h3>
+                        <p class="fade-in">Esta palestra visa conscientizar sobre os perigos da água poluída e suas
+                            implicações para a saúde pública. Com dados sobre doenças transmitidas por água contaminada,
+                            como cólera e hepatite, ela destaca a importância de garantir água limpa para todos.</p>
+                        <p class="fade-in">Além disso, apresenta o filtro ecológico Purify como uma solução acessível e
+                            eficaz para comunidades carentes, explicando seu funcionamento e benefícios. Ao final,
+                            incentiva
+                            a adoção de hábitos de preservação da água e o uso de tecnologias sustentáveis para combater
+                            a
+                            poluição hídrica.</p>
+                        <p class="fade-in"><strong>Data:</strong> 22 de novembro</p>
+                        <p class="fade-in"><strong>Horário:</strong> 13h30min</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <section class="galeria" id="galeria">
+            <h2>Galeria</h2>
+            <div class="galeria-container">
+                <div class="galeria-item">
+                    <img src="img/foto1.jpeg" alt="Imagem 1">
+                </div>
+                <div class="galeria-item">
+                    <img src="img/foto2.jpeg" alt="Imagem 2">
+                </div>
+                <div class="galeria-item">
+                    <img src="img/foto3.jpeg" alt="Imagem 3">
+                </div>
+            </div>
+        </section>
+        <section class="perguntas-educacional" id="perguntas-educacional">
+            <h2 class="fade-in">Perguntas Frequentes</h2>
+            <div class="perguntas-container">
+                <div class="pergunta">
+                    <h3>Quais os principais parâmetros químicos que determinam se uma água é potável?</h3>
+                    <p>A potabilidade da água é determinada por parâmetros como pH, concentração de metais pesados (como
+                        chumbo e mercúrio), presença de nitratos, nitritos, e coliformes fecais. Esses fatores indicam
+                        se a
+                        água é segura para consumo.</p>
+                </div>
+                <div class="pergunta">
+                    <h3>A fervura da água elimina metais pesados e outros contaminantes químicos?</h3>
+                    <p>Não. A fervura elimina micro-organismos como bactérias e vírus, mas não remove contaminantes
+                        químicos
+                        como metais pesados. Para isso, é necessário utilizar filtros ou outros métodos de purificação.
+                    </p>
+                </div>
+                <div class="pergunta">
+                    <h3>Como o cloro age no tratamento da água, e existe algum risco em consumi-lo?</h3>
+                    <p>O cloro é usado para eliminar bactérias, vírus e outros micro-organismos. Apesar de eficaz, o
+                        consumo
+                        em excesso de cloro pode causar desconforto, como gosto desagradável na água. No entanto, quando
+                        utilizado em quantidades adequadas, é seguro para consumo.</p>
+                </div>
+                <div class="pergunta">
+                    <h3>O pH da água interfere na sua potabilidade? Qual a faixa ideal?</h3>
+                    <p>Sim, o pH da água interfere na potabilidade. A faixa ideal está entre 6,5 e 8,5. Valores fora
+                        dessa
+                        faixa podem indicar contaminação ou tornar a água inadequada para consumo.</p>
+                </div>
+            </div>
+        </section>
+        <main class="impacto" id="impacto">
+            <h2 class="fade-in">Impacto em números:</h2>
+            <div class="impacto-container">
+                <div class="impacto-card">
+                    <div class="counter counter-animated" data-target="5000">0</div>
+                    <p>Pessoas impactadas</p>
+                </div>
+                <div class="impacto-card">
+                    <div class="counter counter-animated" data-target="20585">0</div>
+                    <p>Pessoas alcançadas no ciclo educacional</p>
+                </div>
+                <div class="impacto-card">
+                    <div class="counter counter-animated" data-target="105">0</div>
+                    <p>Famílias no Ciclo de Palestra</p>
+                </div>
+                <div class="impacto-card">
+                    <div class="counter counter-animated" data-target="60">0</div>
+                    <p>Estudantes no ciclo de prática</p>
+                </div>
+            </div>
+        </main>
+        <main class="parcerias" id="parcerias">
+            <h2 class="fade-in">Nossas Parcerias</h2>
+            <div class="parcerias-container">
+                <div class="parceria-card">
+                    <img src="img/jc.png" alt="Jornal JC Bairro da Paz" class="parceria-img" />
+                    <h3>Jornal JC Bairro da Paz</h3>
+                    <p>Apoio na divulgação de ações e projetos da comunidade.</p>
+                </div>
+                <div class="parceria-card">
+                    <img src="img/santacasa.png" alt="Projeto Avança" class="parceria-img" />
+                    <h3>Projeto Avançar</h3>
+                    <p>Parceria estratégica para iniciativas educacionais e práticas sustentáveis.</p>
+                </div>
+                <div class="parceria-card">
+                    <img src="img/conselho_moradores_paz.png" alt="Conselho de Moradores do Bairro da Paz"
+                        class="parceria-img" />
+                    <h3>Conselho de Moradores do Bairro da Paz</h3>
+                    <p>Engajamento e participação direta nas ações locais.</p>
+                </div>
+            </div>
+        </main>
+        <main class="contato" id="contato">
+            <h2>Fale Conosco</h2>
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" class="input-field" name="nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" class="input-field" name="email" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" class="textarea-field" name="mensagem" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </main>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 Purify na Comunidade. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
