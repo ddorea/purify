@@ -4,14 +4,19 @@ function animateCounters() {
     counters.forEach(counter => {
         const updateCounter = () => {
             const target = +counter.getAttribute('data-target');
-            const current = +counter.innerText;
+            const current = +counter.innerText.replace(/\D/g, ''); // Remove caracteres não numéricos
             const increment = target / 100;
 
             if (current < target) {
                 counter.innerText = Math.ceil(current + increment);
                 setTimeout(updateCounter, 30);
             } else {
-                counter.innerText = target;
+                // Verifica se o target é 25000 para adicionar o '+'
+                if (target === 25000) {
+                    counter.innerText = '+' + target;
+                } else {
+                    counter.innerText = target;
+                }
             }
         };
 
